@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "Z+K01Olt1rY=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Leo\\source\\repos\\Papelaria\\Papelaria\\Papelaria.Api\\Papelaria.Api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Leo\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.2\\microsoft.aspnetcore.openapi.9.0.2.nupkg.sha512",
+    "C:\\Users\\Leo\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
