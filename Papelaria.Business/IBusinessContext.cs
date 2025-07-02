@@ -12,41 +12,17 @@ namespace Papelaria.Business
     public interface IBusinessContext
     {
 
-        DbSet<Item> Items { get; }
-        DbSet<Category> Categories { get; }
-        DbSet<Brand> Brands { get; }
-        DbSet<Supplier> Suppliers { get; }
-        DbSet<StockMovement> StockMovements { get; }
-        DbSet<TypeMovement> TypeMovement { get; }
-        DbSet<Image> Images { get; }
+        public DbSet<Item> Items { get; }
+        public DbSet<Category> Categories { get; }
+        public DbSet<Brand> Brands { get; }
+        public DbSet<Supplier> Suppliers { get; }
+        public DbSet<StockMovement> StockMovements { get; }
+        public DbSet<TypeMovement> TypeMovement { get; }
+        public DbSet<Image> Images { get; }
 
 
 
-
+        Task<int> SaveChangesAsync(bool acceptAllChangesOnSuccess, CancellationToken cancellationToken = default);
 
     }
 }
-
-
-
-
-
-////da aula do Fernando
-
-//namespace ProjectStructure.Business
-//{
-//    public interface IBusinessContext
-//    {
-
-//        public DbSet<Patient> Patients { get; set; }
-
-
-//        //Task<int> SaveChangesAsync();
-
-//        Task<int> SaveChangesAsync(bool acceptAllChangesOnSucess, CancellationToken cancellationToken = default);
-//    }
-//}
-
-
-
-
