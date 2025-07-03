@@ -1,0 +1,42 @@
+﻿@page "/items"
+@* @inject IApiService ApiService *@
+
+<h3>Items</h3>
+
+@* 
+<MudTable Items="Item" Hover="true" Breakpoint="Breakpoint.Sm" Loading="@_loading" LoadingProgressColor="Color.Info">
+    <HeaderContent>
+        <MudTh>Name</MudTh>
+        <MudTh>Description</MudTh>
+        <MudTh>Qty Stock</MudTh>
+        <MudTh>Selling To Consumer Price</MudTh>
+        <MudTh>Buying From Supplier Price</MudTh>
+    </HeaderContent>
+    <RowTemplate>
+        <MudTd DataLabel="Name">@context.Name</MudTd>
+        <MudTd DataLabel="Description">@context.Description</MudTd>
+        <MudTd DataLabel="QtyStock">@context.QtyStock</MudTd>
+        <MudTd DataLabel="SellingToConsumerPrice">@context.SellingToConsumerPrice</MudTd>
+        <MudTd DataLabel="BuyingFromSupplierPrice">@context.BuyingFromSupplierPrice</MudTd>
+    </RowTemplate>
+</MudTable>
+
+
+@code {
+
+    private string Message { get; set; } = string.Empty;
+
+    private List<Shared.Item>  { get; set; } = new();
+
+    private bool _loading;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+
+        try
+    }
+
+
+} *@
+
