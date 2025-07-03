@@ -3,8 +3,8 @@
 
 <h3>Items</h3>
 
-@* 
-<MudTable Items="Item" Hover="true" Breakpoint="Breakpoint.Sm" Loading="@_loading" LoadingProgressColor="Color.Info">
+@* este Item aqui precisa de referencia no bloco abaixo.
+<MudTable Items="Items" Hover="true" Breakpoint="Breakpoint.Sm" Loading="@_loading" LoadingProgressColor="Color.Info">
     <HeaderContent>
         <MudTh>Name</MudTh>
         <MudTh>Description</MudTh>
@@ -26,7 +26,7 @@
 
     private string Message { get; set; } = string.Empty;
 
-    private List<Shared.Item>  { get; set; } = new();
+    private List<Shared.Item> Items { get; set; } = new();
 
     private bool _loading;
 
