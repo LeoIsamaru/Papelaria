@@ -36,7 +36,8 @@ namespace Papelaria.Business.Entities
         public virtual ICollection<StockMovement> StockMovements { get; set; }
         public virtual ICollection<Image> Images { get; set; }
 
-
+        public bool IsDeleted { get; set; } = false;
+        public DateTime UpdatedAt { get; set; }
 
     }
 }

@@ -1,5 +1,4 @@
-﻿using Papelaria.Business;
-using Papelaria.Business.Entities;
+﻿using Papelaria.Business.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +7,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 
-namespace Papelaria.Business
+namespace Papelaria.Business.Data
 {
     public class BusinessContext : DbContext, IBusinessContext
     {

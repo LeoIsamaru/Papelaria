@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
+using Papelaria.Business.Data;
 
 namespace Papelaria.Business
 {

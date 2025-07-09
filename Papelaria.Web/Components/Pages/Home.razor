@@ -1,7 +1,50 @@
 ﻿@page "/"
+@inject IApiService ApiService
+@inject ISnackbar Snackbar
+@inject IDialogService DialogService
+@rendermode InteractiveServer
+@using MudBlazor
 
-<PageTitle>Home</PageTitle>
+<PageTitle>Requisitos - Grupo 3</PageTitle>
 
-<h1>Hello, world!</h1>
+<MudPaper Class="pa-4">
 
-Welcome to your new app.
+    <MudText Typo="Typo.h4" GutterBottom="true">Grupo 3</MudText>
+    <MudText Typo="Typo.subtitle1">A | D | L</MudText>
+
+    <MudDivider Class="my-2" />
+
+    <MudText Typo="Typo.h5" GutterBottom="true">Arquitectura da Plataforma</MudText>
+    <MudList T="object" Dense="true">
+        <MudListItem>Backend com WEBAPI + BD em SQLServer (EFCore)</MudListItem>
+        <MudListItem>Frontend em Blazor</MudListItem>
+    </MudList>
+
+    <MudDivider Class="my-4" />
+
+    <MudText Typo="Typo.h5" GutterBottom="true">Requisitos Gerais</MudText>
+    <MudList T="object" Dense="true">
+        <MudListItem>Deve ser possível fazer o CRUD dos dados (criações, leituras, edições e eliminações).</MudListItem>
+        <MudListItem>Devem ser criados repositórios públicos com o projecto.</MudListItem>
+    </MudList>
+
+    <MudDivider Class="my-4" />
+
+    <MudText Typo="Typo.h5" GutterBottom="true">Requisitos Inventário de uma loja</MudText>
+    <MudList T="object" Dense="true">
+    <MudListItem>-Adicionar / editar  produtos do inventário.</MudListItem>
+    <MudListItem>-Criar página principal para apresentação de todos os produtos.</MudListItem>
+    <MudListItem>-Os Produtos devem ter pelo menos as seguintes caracteristicas (porém podem acrescentar mais):</MudListItem>
+    <MudListItem>      -Nome</MudListItem>
+    <MudListItem>      -Descrição</MudListItem>
+    <MudListItem>      -Categoria</MudListItem>
+    <MudListItem>      -Preço de Custo</MudListItem>
+    <MudListItem>-Deve ser possivel consultar quantas unidades existem em stock.</MudListItem>
+    <MudListItem>-Será necessário criar uma página para mostrar o detalhe do produto que está a ser consultado.</MudListItem>
+    <MudListItem>-Deve existir um Dashboard que mostre alguns dados do Inventário (As 5 categorias com mais produtos, média de preço de custo numa categoria, valor do stock, entre outras que considere relevantes).</MudListItem>
+    <MudListItem>-Será necessária a criação de pelo menos 2 categorias.</MudListItem>
+    <MudListItem>-Será necessário pelo menos 10 produtos por cada categoria.</MudListItem>
+    <MudListItem>-Implentar sistema de softdelete para as eliminações de registos.</MudListItem>
+    <MudListItem>-Implementar sistema de registo de entradas e saidas de stock com pelo menos 100 registos criados (5 registos por cada produto). </MudListItem> 
+    </MudList>
+</MudPaper>

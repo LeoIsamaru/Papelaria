@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
 
-namespace Papelaria.Business
+namespace Papelaria.Business.Data
 {
     public interface IBusinessContext
     {

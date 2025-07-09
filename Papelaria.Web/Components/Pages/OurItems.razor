@@ -1,25 +1,129 @@
 ﻿@page "/items"
-@* @inject IApiService ApiService *@
+@using Papelaria.Shared
+@inject IApiService ApiService
+@inject ISnackbar Snackbar
+@inject IDialogService DialogService
+@inject NavigationManager NavigationManager
+@rendermode InteractiveServer
 
 <h3>Items</h3>
 
-@* este Item aqui precisa de referencia no bloco abaixo.
-<MudTable Items="Items" Hover="true" Breakpoint="Breakpoint.Sm" Loading="@_loading" LoadingProgressColor="Color.Info">
+@if (_loading)
+{
+    <p><em>Carregando itens...</em></p>
+}
+else if (Items is null)
+{
+    <p class="text-danger">Erro ao carregar dados.</p>
+}
+else if (Items.Count == 0)
+{
+    <p><em>Não há itens na base de dados.</em></p>
+}
+else
+{
+    <MudTable Items="Items" Hover="true" Breakpoint="Breakpoint.Sm">
+        <HeaderContent>
+            <MudTh>Name</MudTh>
+            <MudTh>Description</MudTh>
+            <MudTh>QtyStock</MudTh>
+            <MudTh>Selling Price</MudTh>
+            <MudTh>Buying Price</MudTh>
+        </HeaderContent>
+        <RowTemplate>
+            <MudTd DataLabel="Name">@context.Name</MudTd>
+            <MudTd DataLabel="Description">@context.Description</MudTd>
+            <MudTd DataLabel="QtyStock">@context.QtyStock</MudTd>
+            <MudTd DataLabel="SellingPrice">@context.SellingToConsumerPrice</MudTd>
+            <MudTd DataLabel="BuyingPrice">@context.BuyingFromSupplierPrice</MudTd>
+        </RowTemplate>
+    </MudTable>
+}
+
+
+@code {
+    private bool _loading = true;
+
+    private List<Item> Items = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            Items = await ApiService.GetItemsAsync();
+        }
+        catch
+        {
+            Items = null;
+        }
+        finally
+        {
+            _loading = false;
+        }
+    }
+
+
+
+    //Extras para talvez usar?
+
+    // private void OnEditItem(int id)
+    // {
+    //     // Exemplo: ir para página de edição
+    //     NavigationManager.NavigateTo($"/edit-item/{id}");
+    // }
+
+
+
+    // private async Task OnDeleteItem(int id)
+    // {
+    //     bool confirmed = await DialogService.ShowMessageBox(
+    //         "Confirmar", $"Queres mesmo apagar o item #{id}?",
+    //         yesText: "Sim", noText: "Cancelar");
+
+    //     if (confirmed)
+    //     {
+    //         await ApiService.DeleteItem(id);
+    //         // atualizar lista
+    //         items = await ApiService.GetItems();
+    //         StateHasChanged();
+    //     }
+    // }
+
+
+
+
+
+}
+
+
+
+@* 
+
+
+parte com as accoes ver/editar e eliminar
+<MudTable Items="items">
     <HeaderContent>
-        <MudTh>Name</MudTh>
-        <MudTh>Description</MudTh>
-        <MudTh>Qty Stock</MudTh>
-        <MudTh>Selling To Consumer Price</MudTh>
-        <MudTh>Buying From Supplier Price</MudTh>
+        <MudTh>Id</MudTh>
+        <MudTh>Nome</MudTh>
+        <MudTh>Descrição</MudTh>
+        <MudTh>Ações</MudTh>
     </HeaderContent>
     <RowTemplate>
-        <MudTd DataLabel="Name">@context.Name</MudTd>
-        <MudTd DataLabel="Description">@context.Description</MudTd>
-        <MudTd DataLabel="QtyStock">@context.QtyStock</MudTd>
-        <MudTd DataLabel="SellingToConsumerPrice">@context.SellingToConsumerPrice</MudTd>
-        <MudTd DataLabel="BuyingFromSupplierPrice">@context.BuyingFromSupplierPrice</MudTd>
+        <MudTd DataLabel="Id">@context.Id</MudTd>
+        <MudTd DataLabel="Nome">@context.Name</MudTd>
+        <MudTd DataLabel="Descrição">@context.Description</MudTd>
+        <MudTd>
+            <MudIconButton Icon="@Icons.Material.Filled.Visibility" aria-label="Edit"
+                Color="Color.Primary"
+                OnClick="() => OnEditItem(context.Id)" />
+            <MudIconButton Icon="@Icons.Material.Filled.Delete" aria-label="Delete"
+                Color="Color.Error"
+                OnClick="() => OnDeleteItem(context.Id)" />
+        </MudTd>
     </RowTemplate>
 </MudTable>
+
+
 
 
 @code {
@@ -28,15 +132,4 @@
 
     private List<Shared.Item> Items { get; set; } = new();
 
-    private bool _loading;
-
-    protected override async Task OnInitializedAsync()
-    {
-        await base.OnInitializedAsync();
-
-        try
-    }
-
-
 } *@
-

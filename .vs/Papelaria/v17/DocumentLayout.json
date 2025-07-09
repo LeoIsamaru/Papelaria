@@ -3,56 +3,60 @@
   "WorkspaceRootPath": "C:\\Users\\Leo\\source\\repos\\Papelaria\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{67836D62-E540-4DEC-8993-6AE71EDA0D8D}|Papelaria.Web\\Papelaria.Web.csproj|c:\\users\\leo\\source\\repos\\papelaria\\papelaria.web\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{67836D62-E540-4DEC-8993-6AE71EDA0D8D}|Papelaria.Web\\Papelaria.Web.csproj|solutionrelative:papelaria.web\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{67836D62-E540-4DEC-8993-6AE71EDA0D8D}|Papelaria.Web\\Papelaria.Web.csproj|c:\\users\\leo\\source\\repos\\papelaria\\papelaria.web\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{67836D62-E540-4DEC-8993-6AE71EDA0D8D}|Papelaria.Web\\Papelaria.Web.csproj|solutionrelative:papelaria.web\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{67836D62-E540-4DEC-8993-6AE71EDA0D8D}|Papelaria.Web\\Papelaria.Web.csproj|c:\\users\\leo\\source\\repos\\papelaria\\papelaria.web\\components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{67836D62-E540-4DEC-8993-6AE71EDA0D8D}|Papelaria.Web\\Papelaria.Web.csproj|solutionrelative:papelaria.web\\components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{67836D62-E540-4DEC-8993-6AE71EDA0D8D}|Papelaria.Web\\Papelaria.Web.csproj|c:\\users\\leo\\source\\repos\\papelaria\\papelaria.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{67836D62-E540-4DEC-8993-6AE71EDA0D8D}|Papelaria.Web\\Papelaria.Web.csproj|solutionrelative:papelaria.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{67836D62-E540-4DEC-8993-6AE71EDA0D8D}|Papelaria.Web\\Papelaria.Web.csproj|c:\\users\\leo\\source\\repos\\papelaria\\papelaria.web\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{67836D62-E540-4DEC-8993-6AE71EDA0D8D}|Papelaria.Web\\Papelaria.Web.csproj|solutionrelative:papelaria.web\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EED94FB-9FB3-4208-9D22-1845AFFE2CF7}|Papelaria.Business\\Papelaria.Business.csproj|c:\\users\\leo\\source\\repos\\papelaria\\papelaria.business\\ibusinesscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EED94FB-9FB3-4208-9D22-1845AFFE2CF7}|Papelaria.Business\\Papelaria.Business.csproj|solutionrelative:papelaria.business\\ibusinesscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EED94FB-9FB3-4208-9D22-1845AFFE2CF7}|Papelaria.Business\\Papelaria.Business.csproj|c:\\users\\leo\\source\\repos\\papelaria\\papelaria.business\\businesscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EED94FB-9FB3-4208-9D22-1845AFFE2CF7}|Papelaria.Business\\Papelaria.Business.csproj|solutionrelative:papelaria.business\\businesscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66013EB3-E551-4F00-A660-9D8F2BE6794C}|Papelaria.Shared\\Papelaria.Shared.csproj|c:\\users\\leo\\source\\repos\\papelaria\\papelaria.shared\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66013EB3-E551-4F00-A660-9D8F2BE6794C}|Papelaria.Shared\\Papelaria.Shared.csproj|solutionrelative:papelaria.shared\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EED94FB-9FB3-4208-9D22-1845AFFE2CF7}|Papelaria.Business\\Papelaria.Business.csproj|c:\\users\\leo\\source\\repos\\papelaria\\papelaria.business\\entities\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EED94FB-9FB3-4208-9D22-1845AFFE2CF7}|Papelaria.Business\\Papelaria.Business.csproj|solutionrelative:papelaria.business\\entities\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EED94FB-9FB3-4208-9D22-1845AFFE2CF7}|Papelaria.Business\\Papelaria.Business.csproj|c:\\users\\leo\\source\\repos\\papelaria\\papelaria.business\\entities\\brand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EED94FB-9FB3-4208-9D22-1845AFFE2CF7}|Papelaria.Business\\Papelaria.Business.csproj|solutionrelative:papelaria.business\\entities\\brand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{67836D62-E540-4DEC-8993-6AE71EDA0D8D}|Papelaria.Web\\Papelaria.Web.csproj|c:\\users\\leo\\source\\repos\\papelaria\\papelaria.web\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{67836D62-E540-4DEC-8993-6AE71EDA0D8D}|Papelaria.Web\\Papelaria.Web.csproj|solutionrelative:papelaria.web\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{38AF4DB5-F612-4488-AF18-A6654AC5AE4E}|Papelaria.Api\\Papelaria.Api.csproj|c:\\users\\leo\\source\\repos\\papelaria\\papelaria.api\\controllers\\itemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{38AF4DB5-F612-4488-AF18-A6654AC5AE4E}|Papelaria.Api\\Papelaria.Api.csproj|solutionrelative:papelaria.api\\controllers\\itemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{6EED94FB-9FB3-4208-9D22-1845AFFE2CF7}|Papelaria.Business\\Papelaria.Business.csproj|c:\\users\\leo\\source\\repos\\papelaria\\papelaria.business\\entities\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EED94FB-9FB3-4208-9D22-1845AFFE2CF7}|Papelaria.Business\\Papelaria.Business.csproj|solutionrelative:papelaria.business\\entities\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66013EB3-E551-4F00-A660-9D8F2BE6794C}|Papelaria.Shared\\Papelaria.Shared.csproj|c:\\users\\leo\\source\\repos\\papelaria\\papelaria.shared\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66013EB3-E551-4F00-A660-9D8F2BE6794C}|Papelaria.Shared\\Papelaria.Shared.csproj|solutionrelative:papelaria.shared\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EED94FB-9FB3-4208-9D22-1845AFFE2CF7}|Papelaria.Business\\Papelaria.Business.csproj|c:\\users\\leo\\source\\repos\\papelaria\\papelaria.business\\data\\businesscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EED94FB-9FB3-4208-9D22-1845AFFE2CF7}|Papelaria.Business\\Papelaria.Business.csproj|solutionrelative:papelaria.business\\data\\businesscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67836D62-E540-4DEC-8993-6AE71EDA0D8D}|Papelaria.Web\\Papelaria.Web.csproj|c:\\users\\leo\\source\\repos\\papelaria\\papelaria.web\\components\\pages\\ouritems.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{67836D62-E540-4DEC-8993-6AE71EDA0D8D}|Papelaria.Web\\Papelaria.Web.csproj|solutionrelative:papelaria.web\\components\\pages\\ouritems.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67836D62-E540-4DEC-8993-6AE71EDA0D8D}|Papelaria.Web\\Papelaria.Web.csproj|c:\\users\\leo\\source\\repos\\papelaria\\papelaria.web\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{67836D62-E540-4DEC-8993-6AE71EDA0D8D}|Papelaria.Web\\Papelaria.Web.csproj|solutionrelative:papelaria.web\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{38AF4DB5-F612-4488-AF18-A6654AC5AE4E}|Papelaria.Api\\Papelaria.Api.csproj|c:\\users\\leo\\source\\repos\\papelaria\\papelaria.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{38AF4DB5-F612-4488-AF18-A6654AC5AE4E}|Papelaria.Api\\Papelaria.Api.csproj|solutionrelative:papelaria.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{67836D62-E540-4DEC-8993-6AE71EDA0D8D}|Papelaria.Web\\Papelaria.Web.csproj|c:\\users\\leo\\source\\repos\\papelaria\\papelaria.web\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{67836D62-E540-4DEC-8993-6AE71EDA0D8D}|Papelaria.Web\\Papelaria.Web.csproj|solutionrelative:papelaria.web\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{67836D62-E540-4DEC-8993-6AE71EDA0D8D}|Papelaria.Web\\Papelaria.Web.csproj|c:\\users\\leo\\source\\repos\\papelaria\\papelaria.web\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{67836D62-E540-4DEC-8993-6AE71EDA0D8D}|Papelaria.Web\\Papelaria.Web.csproj|solutionrelative:papelaria.web\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EED94FB-9FB3-4208-9D22-1845AFFE2CF7}|Papelaria.Business\\Papelaria.Business.csproj|c:\\users\\leo\\source\\repos\\papelaria\\papelaria.business\\data\\ibusinesscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EED94FB-9FB3-4208-9D22-1845AFFE2CF7}|Papelaria.Business\\Papelaria.Business.csproj|solutionrelative:papelaria.business\\data\\ibusinesscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38AF4DB5-F612-4488-AF18-A6654AC5AE4E}|Papelaria.Api\\Papelaria.Api.csproj|c:\\users\\leo\\source\\repos\\papelaria\\papelaria.api\\models\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38AF4DB5-F612-4488-AF18-A6654AC5AE4E}|Papelaria.Api\\Papelaria.Api.csproj|solutionrelative:papelaria.api\\models\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67836D62-E540-4DEC-8993-6AE71EDA0D8D}|Papelaria.Web\\Papelaria.Web.csproj|c:\\users\\leo\\source\\repos\\papelaria\\papelaria.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67836D62-E540-4DEC-8993-6AE71EDA0D8D}|Papelaria.Web\\Papelaria.Web.csproj|solutionrelative:papelaria.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67836D62-E540-4DEC-8993-6AE71EDA0D8D}|Papelaria.Web\\Papelaria.Web.csproj|c:\\users\\leo\\source\\repos\\papelaria\\papelaria.web\\iapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67836D62-E540-4DEC-8993-6AE71EDA0D8D}|Papelaria.Web\\Papelaria.Web.csproj|solutionrelative:papelaria.web\\iapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38AF4DB5-F612-4488-AF18-A6654AC5AE4E}|Papelaria.Api\\Papelaria.Api.csproj|c:\\users\\leo\\source\\repos\\papelaria\\papelaria.api\\papelaria.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{38AF4DB5-F612-4488-AF18-A6654AC5AE4E}|Papelaria.Api\\Papelaria.Api.csproj|solutionrelative:papelaria.api\\papelaria.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,176 +66,178 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "_Imports.razor",
-              "DocumentMoniker": "C:\\Users\\Leo\\source\\repos\\Papelaria\\Papelaria.Web\\Components\\_Imports.razor",
-              "RelativeDocumentMoniker": "Papelaria.Web\\Components\\_Imports.razor",
-              "ToolTip": "C:\\Users\\Leo\\source\\repos\\Papelaria\\Papelaria.Web\\Components\\_Imports.razor",
-              "RelativeToolTip": "Papelaria.Web\\Components\\_Imports.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-03T16:46:43.417Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Leo\\source\\repos\\Papelaria\\Papelaria.Web\\Program.cs",
-              "RelativeDocumentMoniker": "Papelaria.Web\\Program.cs",
-              "ToolTip": "C:\\Users\\Leo\\source\\repos\\Papelaria\\Papelaria.Web\\Program.cs",
-              "RelativeToolTip": "Papelaria.Web\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-03T16:35:36.997Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Routes.razor",
-              "DocumentMoniker": "C:\\Users\\Leo\\source\\repos\\Papelaria\\Papelaria.Web\\Components\\Routes.razor",
-              "RelativeDocumentMoniker": "Papelaria.Web\\Components\\Routes.razor",
-              "ToolTip": "C:\\Users\\Leo\\source\\repos\\Papelaria\\Papelaria.Web\\Components\\Routes.razor",
-              "RelativeToolTip": "Papelaria.Web\\Components\\Routes.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-03T16:35:33.376Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "App.razor",
-              "DocumentMoniker": "C:\\Users\\Leo\\source\\repos\\Papelaria\\Papelaria.Web\\Components\\App.razor",
-              "RelativeDocumentMoniker": "Papelaria.Web\\Components\\App.razor",
-              "ToolTip": "C:\\Users\\Leo\\source\\repos\\Papelaria\\Papelaria.Web\\Components\\App.razor",
-              "RelativeToolTip": "Papelaria.Web\\Components\\App.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-03T16:35:25.845Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "MainLayout.razor",
               "DocumentMoniker": "C:\\Users\\Leo\\source\\repos\\Papelaria\\Papelaria.Web\\Components\\Layout\\MainLayout.razor",
               "RelativeDocumentMoniker": "Papelaria.Web\\Components\\Layout\\MainLayout.razor",
               "ToolTip": "C:\\Users\\Leo\\source\\repos\\Papelaria\\Papelaria.Web\\Components\\Layout\\MainLayout.razor",
               "RelativeToolTip": "Papelaria.Web\\Components\\Layout\\MainLayout.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-03T16:35:20.89Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-08T18:51:56.483Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\Leo\\source\\repos\\Papelaria\\Papelaria.Web\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "Papelaria.Web\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\Leo\\source\\repos\\Papelaria\\Papelaria.Web\\Properties\\launchSettings.json",
-              "RelativeToolTip": "Papelaria.Web\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-07-01T17:34:32.232Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "BusinessContext.cs",
-              "DocumentMoniker": "C:\\Users\\Leo\\source\\repos\\Papelaria\\Papelaria.Business\\BusinessContext.cs",
-              "RelativeDocumentMoniker": "Papelaria.Business\\BusinessContext.cs",
-              "ToolTip": "C:\\Users\\Leo\\source\\repos\\Papelaria\\Papelaria.Business\\BusinessContext.cs",
-              "RelativeToolTip": "Papelaria.Business\\BusinessContext.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAowCsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-01T16:53:15.017Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IBusinessContext.cs",
-              "DocumentMoniker": "C:\\Users\\Leo\\source\\repos\\Papelaria\\Papelaria.Business\\IBusinessContext.cs",
-              "RelativeDocumentMoniker": "Papelaria.Business\\IBusinessContext.cs",
-              "ToolTip": "C:\\Users\\Leo\\source\\repos\\Papelaria\\Papelaria.Business\\IBusinessContext.cs",
-              "RelativeToolTip": "Papelaria.Business\\IBusinessContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-01T16:49:10.057Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Leo\\source\\repos\\Papelaria\\Papelaria.Api\\Program.cs",
-              "RelativeDocumentMoniker": "Papelaria.Api\\Program.cs",
-              "ToolTip": "C:\\Users\\Leo\\source\\repos\\Papelaria\\Papelaria.Api\\Program.cs",
-              "RelativeToolTip": "Papelaria.Api\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-01T16:46:30.8Z",
+              "DocumentIndex": 0,
+              "Title": "Home.razor",
+              "DocumentMoniker": "C:\\Users\\Leo\\source\\repos\\Papelaria\\Papelaria.Web\\Components\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "Papelaria.Web\\Components\\Pages\\Home.razor",
+              "ToolTip": "C:\\Users\\Leo\\source\\repos\\Papelaria\\Papelaria.Web\\Components\\Pages\\Home.razor",
+              "RelativeToolTip": "Papelaria.Web\\Components\\Pages\\Home.razor",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAC0AAABVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-08T18:50:56.258Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
+              "Title": "Item.cs",
+              "DocumentMoniker": "C:\\Users\\Leo\\source\\repos\\Papelaria\\Papelaria.Api\\Models\\Item.cs",
+              "RelativeDocumentMoniker": "Papelaria.Api\\Models\\Item.cs",
+              "ToolTip": "C:\\Users\\Leo\\source\\repos\\Papelaria\\Papelaria.Api\\Models\\Item.cs",
+              "RelativeToolTip": "Papelaria.Api\\Models\\Item.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T16:48:33.426Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IBusinessContext.cs",
+              "DocumentMoniker": "C:\\Users\\Leo\\source\\repos\\Papelaria\\Papelaria.Business\\Data\\IBusinessContext.cs",
+              "RelativeDocumentMoniker": "Papelaria.Business\\Data\\IBusinessContext.cs",
+              "ToolTip": "C:\\Users\\Leo\\source\\repos\\Papelaria\\Papelaria.Business\\Data\\IBusinessContext.cs",
+              "RelativeToolTip": "Papelaria.Business\\Data\\IBusinessContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T16:34:40.138Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Papelaria.Api.csproj",
+              "DocumentMoniker": "C:\\Users\\Leo\\source\\repos\\Papelaria\\Papelaria.Api\\Papelaria.Api.csproj",
+              "RelativeDocumentMoniker": "Papelaria.Api\\Papelaria.Api.csproj",
+              "ToolTip": "C:\\Users\\Leo\\source\\repos\\Papelaria\\Papelaria.Api\\Papelaria.Api.csproj",
+              "RelativeToolTip": "Papelaria.Api\\Papelaria.Api.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-07-08T16:28:33.467Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Leo\\source\\repos\\Papelaria\\Papelaria.Web\\Program.cs",
+              "RelativeDocumentMoniker": "Papelaria.Web\\Program.cs",
+              "ToolTip": "C:\\Users\\Leo\\source\\repos\\Papelaria\\Papelaria.Web\\Program.cs",
+              "RelativeToolTip": "Papelaria.Web\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T16:21:46.204Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IApiService.cs",
+              "DocumentMoniker": "C:\\Users\\Leo\\source\\repos\\Papelaria\\Papelaria.Web\\IApiService.cs",
+              "RelativeDocumentMoniker": "Papelaria.Web\\IApiService.cs",
+              "ToolTip": "C:\\Users\\Leo\\source\\repos\\Papelaria\\Papelaria.Web\\IApiService.cs",
+              "RelativeToolTip": "Papelaria.Web\\IApiService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T18:30:25.748Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Leo\\source\\repos\\Papelaria\\Papelaria.Api\\Program.cs",
+              "RelativeDocumentMoniker": "Papelaria.Api\\Program.cs",
+              "ToolTip": "C:\\Users\\Leo\\source\\repos\\Papelaria\\Papelaria.Api\\Program.cs",
+              "RelativeToolTip": "Papelaria.Api\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T18:53:17.868Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\Leo\\source\\repos\\Papelaria\\Papelaria.Web\\Components\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "Papelaria.Web\\Components\\Layout\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\Leo\\source\\repos\\Papelaria\\Papelaria.Web\\Components\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "Papelaria.Web\\Components\\Layout\\NavMenu.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-03T16:59:57.003Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "OurItems.razor",
+              "DocumentMoniker": "C:\\Users\\Leo\\source\\repos\\Papelaria\\Papelaria.Web\\Components\\Pages\\OurItems.razor",
+              "RelativeDocumentMoniker": "Papelaria.Web\\Components\\Pages\\OurItems.razor",
+              "ToolTip": "C:\\Users\\Leo\\source\\repos\\Papelaria\\Papelaria.Web\\Components\\Pages\\OurItems.razor",
+              "RelativeToolTip": "Papelaria.Web\\Components\\Pages\\OurItems.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-03T16:57:07.039Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BusinessContext.cs",
+              "DocumentMoniker": "C:\\Users\\Leo\\source\\repos\\Papelaria\\Papelaria.Business\\Data\\BusinessContext.cs",
+              "RelativeDocumentMoniker": "Papelaria.Business\\Data\\BusinessContext.cs",
+              "ToolTip": "C:\\Users\\Leo\\source\\repos\\Papelaria\\Papelaria.Business\\Data\\BusinessContext.cs",
+              "RelativeToolTip": "Papelaria.Business\\Data\\BusinessContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-01T16:53:15.017Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "ItemController.cs",
               "DocumentMoniker": "C:\\Users\\Leo\\source\\repos\\Papelaria\\Papelaria.Api\\Controllers\\ItemController.cs",
               "RelativeDocumentMoniker": "Papelaria.Api\\Controllers\\ItemController.cs",
               "ToolTip": "C:\\Users\\Leo\\source\\repos\\Papelaria\\Papelaria.Api\\Controllers\\ItemController.cs",
               "RelativeToolTip": "Papelaria.Api\\Controllers\\ItemController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAGgAAAAAAAAAAAAlwGYAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-01T16:45:51.389Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Brand.cs",
-              "DocumentMoniker": "C:\\Users\\Leo\\source\\repos\\Papelaria\\Papelaria.Business\\Entities\\Brand.cs",
-              "RelativeDocumentMoniker": "Papelaria.Business\\Entities\\Brand.cs",
-              "ToolTip": "C:\\Users\\Leo\\source\\repos\\Papelaria\\Papelaria.Business\\Entities\\Brand.cs",
-              "RelativeToolTip": "Papelaria.Business\\Entities\\Brand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-01T18:22:23.88Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 2,
               "Title": "Item.cs",
               "DocumentMoniker": "C:\\Users\\Leo\\source\\repos\\Papelaria\\Papelaria.Business\\Entities\\Item.cs",
               "RelativeDocumentMoniker": "Papelaria.Business\\Entities\\Item.cs",
               "ToolTip": "C:\\Users\\Leo\\source\\repos\\Papelaria\\Papelaria.Business\\Entities\\Item.cs",
               "RelativeToolTip": "Papelaria.Business\\Entities\\Item.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAowCYAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-01T16:36:33.405Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "Item.cs",
               "DocumentMoniker": "C:\\Users\\Leo\\source\\repos\\Papelaria\\Papelaria.Shared\\Item.cs",
               "RelativeDocumentMoniker": "Papelaria.Shared\\Item.cs",
               "ToolTip": "C:\\Users\\Leo\\source\\repos\\Papelaria\\Papelaria.Shared\\Item.cs",
               "RelativeToolTip": "Papelaria.Shared\\Item.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-01T16:35:58.598Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-01T16:35:58.598Z"
             }
           ]
         }

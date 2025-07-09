@@ -1,4 +1,4 @@
-using Papelaria.Business;
+using Papelaria.Business.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 

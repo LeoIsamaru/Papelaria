@@ -1,14 +1,10 @@
 using Papelaria.Web.Components;
 using MudBlazor.Services;
+using Papelaria.Web.Components;
+using Papelaria.Web;
+using Refit;
 
 
-
-namespace Papelaria.Web;
-
-public class Program
-{
-    public static void Main(string[] args)
-    {
         var builder = WebApplication.CreateBuilder(args);
 
         // Add services to the container.
@@ -16,6 +12,14 @@ public class Program
             .AddInteractiveServerComponents();
 
         builder.Services.AddMudServices();
+
+        builder.Services
+        .AddRefitClient<IApiService>()
+        .ConfigureHttpClient(c => c.BaseAddress = new Uri("https://localhost:7057"));
+
+        builder.Services.AddMudServices();
+
+
 
         var app = builder.Build();
 
@@ -36,5 +40,3 @@ public class Program
             .AddInteractiveServerRenderMode();
 
         app.Run();
-    }
-}
