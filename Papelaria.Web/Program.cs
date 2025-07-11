@@ -1,8 +1,9 @@
 using Papelaria.Web.Components;
 using MudBlazor.Services;
-using Papelaria.Web.Components;
 using Papelaria.Web;
 using Refit;
+//using Papelaria.Web.Services;
+
 
 
         var builder = WebApplication.CreateBuilder(args);
@@ -13,15 +14,16 @@ using Refit;
 
         builder.Services.AddMudServices();
 
+
         builder.Services
         .AddRefitClient<IApiService>()
         .ConfigureHttpClient(c => c.BaseAddress = new Uri("https://localhost:7057"));
 
         builder.Services.AddMudServices();
 
+        //builder.Services.AddScoped<IProductService, ApiProductService>();   para o dashboard?
 
-
-        var app = builder.Build();
+var app = builder.Build();
 
         // Configure the HTTP request pipeline.
         if (!app.Environment.IsDevelopment())

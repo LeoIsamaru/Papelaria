@@ -22,20 +22,31 @@ else if (Items.Count == 0)
 }
 else
 {
-    <MudTable Items="Items" Hover="true" Breakpoint="Breakpoint.Sm">
-        <HeaderContent>
-            <MudTh>Name</MudTh>
-            <MudTh>Description</MudTh>
-            <MudTh>QtyStock</MudTh>
-            <MudTh>Selling Price</MudTh>
-            <MudTh>Buying Price</MudTh>
-        </HeaderContent>
-        <RowTemplate>
-            <MudTd DataLabel="Name">@context.Name</MudTd>
-            <MudTd DataLabel="Description">@context.Description</MudTd>
-            <MudTd DataLabel="QtyStock">@context.QtyStock</MudTd>
-            <MudTd DataLabel="SellingPrice">@context.SellingToConsumerPrice</MudTd>
-            <MudTd DataLabel="BuyingPrice">@context.BuyingFromSupplierPrice</MudTd>
+
+    <MudTable Items="Items" Hover="true" Breakpoint="Breakpoint.Sm" Loading="@_loading" LoadingProgressColor="Color.Info">
+    <HeaderContent>
+            <MudTh Style="width: 15%;" Justify="Justify.Center">Name</MudTh>
+            <MudTh Style="width: 45%;" Justify="Justify.Center">Description</MudTh>
+            <MudTh Style="width: 10%;" Justify="Justify.Center">Qty Stock</MudTh>
+            <MudTh Style="width: 10%;" Justify="Justify.Center">Selling Price</MudTh>
+            <MudTh Style="width: 10%;" Justify="Justify.Center">Buying Price</MudTh>
+            <MudTh Style="width: 10%;" Justify="Justify.Center">Actions</MudTh>
+    </HeaderContent>
+
+    <RowTemplate>
+            <MudTd Style="width: 15%;" DataLabel="Name" Justify="Justify.Center">@context.Name</MudTd>
+            <MudTd Style="width: 45%;" DataLabel="Description" Justify="Justify.Center">@context.Description</MudTd>
+            <MudTd Style="width: 10%;" DataLabel="QtyStock" Justify="Justify.Center">@context.QtyStock</MudTd>
+            <MudTd Style="width: 10%;" DataLabel="SellingPrice" Justify="Justify.Center">@context.SellingToConsumerPrice</MudTd>
+            <MudTd Style="width: 10%;" DataLabel="BuyingPrice" Justify="Justify.Center">@context.BuyingFromSupplierPrice</MudTd>
+    <MudTd Style="width: 10%;" DataLabel="Actions">
+                <MudBlazor.MudIconButton Icon="@Icons.Material.Filled.Visibility" aria-label="Edit"
+                    OnClick="() => OnEditItem(context.Id)">
+                </MudBlazor.MudIconButton>
+                <MudBlazor.MudIconButton Icon="@Icons.Material.Filled.Delete" aria-label="Delete"
+                    OnClick="() => OnDeleteItem(context.Id)">
+                </MudBlazor.MudIconButton>
+            </MudTd>
         </RowTemplate>
     </MudTable>
 }
@@ -46,90 +57,67 @@ else
 
     private List<Item> Items = new();
 
+    private string Message { get; set; } = string.Empty;
+
+
     protected override async Task OnInitializedAsync()
     {
+        await base.OnInitializedAsync();
+
         try
         {
-            Items = await ApiService.GetItemsAsync();
+            await LoadItems();
+            // StateHasChanged();
         }
-        catch
+        catch (Exception)
         {
-            Items = null;
+            Message = "Erro ao receber os items!";
         }
         finally
         {
             _loading = false;
         }
+
+    }
+
+    private void OnEditItem(int id)
+    {
+        // Exemplo: ir para página de edição
+        NavigationManager.NavigateTo($"/edit-item/{id}");
     }
 
 
+    private async Task LoadItems()
+    {
+        Items = await ApiService.GetItemsAsync();
+        StateHasChanged();
+    }
 
-    //Extras para talvez usar?
+    private async void OnDeleteItem(int id)
+    {
+        var response = await ApiService.DeleteItemAsync(id);
+        if (response.IsSuccessStatusCode)
+        {
+            Snackbar.Add("Item eliminado com sucesso!", Severity.Success);
+            await LoadItems();
+        }
+        else
+        {
+            Snackbar.Add("Erro ao eliminar o item!", Severity.Error);
+            return;
+        }
 
-    // private void OnEditItem(int id)
-    // {
-    //     // Exemplo: ir para página de edição
-    //     NavigationManager.NavigateTo($"/edit-item/{id}");
-    // }
-
-
-
-    // private async Task OnDeleteItem(int id)
-    // {
-    //     bool confirmed = await DialogService.ShowMessageBox(
-    //         "Confirmar", $"Queres mesmo apagar o item #{id}?",
-    //         yesText: "Sim", noText: "Cancelar");
-
-    //     if (confirmed)
-    //     {
-    //         await ApiService.DeleteItem(id);
-    //         // atualizar lista
-    //         items = await ApiService.GetItems();
-    //         StateHasChanged();
-    //     }
-    // }
+    }
 
 
-
-
+// ===========ALTERAÇOES GRAFICAS A FAZER========
+//   -  centrar valores numericos da tabela
+//   -  adicionar € nas linhas 
+//   - o Justify="Justify.Center" não está a funcionar?
+//   -
+//   -
+//   -
+//   -
+//   -
 
 }
-
-
-
-@* 
-
-
-parte com as accoes ver/editar e eliminar
-<MudTable Items="items">
-    <HeaderContent>
-        <MudTh>Id</MudTh>
-        <MudTh>Nome</MudTh>
-        <MudTh>Descrição</MudTh>
-        <MudTh>Ações</MudTh>
-    </HeaderContent>
-    <RowTemplate>
-        <MudTd DataLabel="Id">@context.Id</MudTd>
-        <MudTd DataLabel="Nome">@context.Name</MudTd>
-        <MudTd DataLabel="Descrição">@context.Description</MudTd>
-        <MudTd>
-            <MudIconButton Icon="@Icons.Material.Filled.Visibility" aria-label="Edit"
-                Color="Color.Primary"
-                OnClick="() => OnEditItem(context.Id)" />
-            <MudIconButton Icon="@Icons.Material.Filled.Delete" aria-label="Delete"
-                Color="Color.Error"
-                OnClick="() => OnDeleteItem(context.Id)" />
-        </MudTd>
-    </RowTemplate>
-</MudTable>
-
-
-
-
-@code {
-
-    private string Message { get; set; } = string.Empty;
-
-    private List<Shared.Item> Items { get; set; } = new();
-
-} *@

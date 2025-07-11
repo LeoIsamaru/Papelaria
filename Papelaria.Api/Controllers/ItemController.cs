@@ -101,7 +101,7 @@ namespace Papelaria.Api.Controllers
 
 
         // PUT /items/{id}/update   (Update Items)
-        [HttpPut("/items/{id}/update")]
+        [HttpPut("/edit-item/{id}")]
         public async Task<IActionResult> UpdateItem(int id, [FromBody] Papelaria.Shared.Item updatedItem)
         {
             var item = await _businessContext.Items.FindAsync(id);
