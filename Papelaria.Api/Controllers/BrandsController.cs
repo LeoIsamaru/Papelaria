@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 namespace Papelaria.Api.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("[controller]")]
 
 
     public class BrandsController : ControllerBase
@@ -19,19 +19,27 @@ namespace Papelaria.Api.Controllers
             _context = context;
         }
 
-        [HttpPost]
-        public async Task<IActionResult> AddBrand([FromBody] Brand brand)
+        [HttpPost("/brands")]
+        public async Task<IActionResult> AddBrand([FromBody] Papelaria.Shared.Brand brand)
         {
             if (brand == null) return BadRequest();
 
-            _context.Brands.Add(brand);
+            var newBrand = new Brand
+            {
+                BrandName = brand.BrandName,
+                CreatedAt = DateTime.Now,
+                UpdatedAt = DateTime.Now,
+                Items = new List<Item>()
+            };
+
+            _context.Brands.Add(newBrand);
             await _context.SaveChangesAsync();
 
             return Ok(brand);
         }
 
 
-        [HttpGet]
+        [HttpGet("/brands")]
         public async Task<ActionResult<IEnumerable<Brand>>> GetBrands()
         {
             var brands = await _context.Brands.ToListAsync();

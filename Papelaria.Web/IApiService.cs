@@ -47,7 +47,7 @@ namespace Papelaria.Web
 
 
         //para adicionar Brands, Category e Suppliers na BD
-        [Post("/api/brands")]
+        [Post("/brands")]
         Task<HttpResponseMessage> AddBrandAsync([Body] Shared.Brand brand);
 
         [Post("/api/categories")]
