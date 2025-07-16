@@ -1,5 +1,5 @@
 ﻿using Refit;
-//using Papelaria.Shared;
+using Papelaria.Shared;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Collections.Generic;
@@ -14,15 +14,15 @@ namespace Papelaria.Web
         Task<List<Papelaria.Shared.Item>> GetItemsAsync();
 
 
-
-
-
-        //[Get("/item/{id}")]
-        //Task<Shared.Papelaria> GetPatientsAsync(int id);
+        [Get("/items/{id}")]
+        Task<Papelaria.Shared.Item> GetItemAsync(int id);
 
 
         [Post("/items")]
         Task<HttpResponseMessage> AddItemAsync([Body] Shared.Item item);
+
+        //[Post("/Additem")]
+        //Task<HttpResponseMessage> AddItemAsync([Body] Shared.Item item);
 
 
         [Put("/items")]
@@ -33,7 +33,28 @@ namespace Papelaria.Web
         Task<HttpResponseMessage> DeleteItemAsync(int id);
 
 
+        // GET brands, categories, suppliers
+        [Get("/items/brands")]
+        Task<List<Brand>> GetBrandsAsync();
 
+        [Get("/items/categories")]
+        Task<List<Category>> GetCategoriesAsync();
+
+        [Get("/items/suppliers")]
+        Task<List<Supplier>> GetSuppliersAsync();
+
+
+
+
+        //para adicionar Brands, Category e Suppliers na BD
+        [Post("/api/brands")]
+        Task<HttpResponseMessage> AddBrandAsync([Body] Shared.Brand brand);
+
+        [Post("/api/categories")]
+        Task<HttpResponseMessage> AddCategoryAsync([Body] Shared.Category category);
+
+        [Post("/api/suppliers")]
+        Task<HttpResponseMessage> AddSupplierAsync([Body] Shared.Supplier supplier);
 
 
         // da aula do fernando já adaptado para o projeto, mas pode precisar ainda de correcçoes

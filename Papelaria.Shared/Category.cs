@@ -5,19 +5,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Papelaria.Business.Entities
+namespace Papelaria.Shared
 {
-    public class Category : BaseEntity
+    public class Category
     {
+        public int Id { get; set; }
+
         [Required]
         public string? CategoryName { get; set; }
 
         [Required]
         public string? CategoryDescription { get; set; }
 
-
-
-        //Propriedades Navegação
-        public virtual ICollection<Item> Items { get; set; }
     }
 }

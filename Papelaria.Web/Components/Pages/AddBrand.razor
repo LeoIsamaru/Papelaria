@@ -1,0 +1,63 @@
+﻿@page "/addbrand"
+@inject IApiService ApiService
+@inject ISnackbar Snackbar
+@using Papelaria.Shared
+@using MudBlazor
+@rendermode InteractiveServer
+
+<MudSnackbarProvider />
+
+<h3>Add Brand</h3>
+
+<EditForm Model="brand" OnValidSubmit="OnAddBrand">
+    <DataAnnotationsValidator />
+
+    <MudItem xs="12" md="12">
+        <MudTextField @bind-Value="brand.BrandName"
+                      Label="Marca"
+                      Variant="Variant.Outlined"
+                      Required="true"
+                      RequiredError="Marca é obrigatória!"
+                      Class="mb-3" />
+    </MudItem>
+
+
+    <!-- Botão de submit -->
+    <MudButton Variant="Variant.Filled"
+               Color="Color.Primary"
+               ButtonType="ButtonType.Submit"
+               Class="mt-3">
+        Adicionar Item
+    </MudButton>
+
+
+    <MudItem xs="12" Class="text-center mt-2">
+        <MudText Typo="Typo.caption">Campo marcado com asterisco(*) é obrigatório!</MudText>
+    </MudItem>
+
+
+
+
+    <ValidationSummary />
+</EditForm>
+
+@Message
+
+@code {
+    private Brand brand = new();
+    private string Message = string.Empty;
+
+    private async Task OnAddBrand()
+    {
+        var response = await ApiService.AddBrandAsync(brand);
+        if (response.IsSuccessStatusCode)
+        {
+            Snackbar.Add("Brand added successfully!", Severity.Success);
+            brand = new();
+        }
+        else
+        {
+            Snackbar.Add("Error adding brand!", Severity.Error);
+        }
+    }
+}

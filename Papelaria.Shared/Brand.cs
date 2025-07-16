@@ -5,16 +5,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Papelaria.Business.Entities
+namespace Papelaria.Shared
 {
-    public class Brand : BaseEntity
+    public class Brand
     {
+        public int Id { get; set; }
+
         [Required]
         public string? BrandName { get; set; }
-
-
-
-        //Propriedades Navegação
-        public virtual ICollection<Item> Items { get; set; }
     }
 }
+
+

@@ -16,10 +16,8 @@ namespace Papelaria.Business.Entities
 
         public int QtyStock { get; set; }
 
-        public float SellingToConsumerPrice { get; set; }
-
-        public float BuyingFromSupplierPrice { get; set; }
-
+        public decimal SellingToConsumerPrice { get; set; }
+        public decimal BuyingFromSupplierPrice { get; set; }
 
         // Chaves estrangeiras (FK's)
         public int BrandId { get; set; }

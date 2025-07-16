@@ -1,0 +1,56 @@
+﻿@page "/addsupplier"
+@inject IApiService ApiService
+@inject ISnackbar Snackbar
+@using Papelaria.Shared
+@using MudBlazor
+@rendermode InteractiveServer
+
+<MudSnackbarProvider />
+
+<h3>Add Supplier</h3>
+
+<EditForm Model="supplier" OnValidSubmit="OnAddSupplier">
+    <DataAnnotationsValidator />
+
+    <div class="mb-3">
+        <label class="form-label">Supplier Name</label>
+        <InputText class="form-control" placeholder="Supplier Name" @bind-Value="supplier.SupplierName" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Supplier Email</label>
+        <InputText class="form-control" placeholder="Supplier Email" @bind-Value="supplier.SupplierEmail" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Supplier Address</label>
+        <InputText class="form-control" placeholder="Supplier Address" @bind-Value="supplier.SupplierAddress" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Supplier Phone</label>
+        <InputText class="form-control" placeholder="Supplier Phone" @bind-Value="supplier.SupplierPhone" />
+    </div>
+
+    <button class="btn btn-primary" type="submit">Add</button>
+
+    <ValidationSummary />
+</EditForm>
+
+@Message
+
+@code {
+    private Supplier supplier = new();
+    private string Message = string.Empty;
+
+    private async Task OnAddSupplier()
+    {
+        var response = await ApiService.AddSupplierAsync(supplier);
+        if (response.IsSuccessStatusCode)
+        {
+            Snackbar.Add("Supplier added successfully!", Severity.Success);
+            supplier = new();
+        }
+        else
+        {
+            Snackbar.Add("Error adding supplier!", Severity.Error);
+        }
+    }
+}

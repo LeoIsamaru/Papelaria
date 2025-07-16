@@ -1,97 +1,213 @@
-﻿@* @page "/additem"
-@page "/edititem/{Id:int}"
+﻿@page "/Additem"
+@* @page "/edititem/{Id:int}" *@
 @inject IApiService ApiService
 @inject ISnackbar Snackbar
 @using Papelaria.Shared
 @using MudBlazor
 @rendermode InteractiveServer
 
+
+<MudPopoverProvider />   @* adicionado aqui para resolver o erro que existia, caso estive no MainLayout - verificado com o Rúben 15/Julho *@
 <MudSnackbarProvider/>
-@if(Id > 0)
+@* @if(Id > 0)
 {
     <h3>Edit Item</h3>
 }
 else
 { 
     <h3>Add Item</h3>
- }
+ } *@
+<h3>Add Item</h3>
+
+<EditForm Model="Item" OnValidSubmit="OnAddItem">
+
+    <DataAnnotationsValidator />
+
+    <MudGrid>
+        <!-- Linha 1: Nome e Descrição -->
+        <MudItem xs="12" md="12">
+            <MudTextField @bind-Value="Item.Name"
+                          Label="Nome"
+                          Variant="Variant.Outlined"
+                          Required="true"
+                          RequiredError="Nome é obrigatório"
+                          Class="mb-3" />
+        </MudItem>
+
+        <MudItem xs="12" md="12">
+            <MudTextField @bind-Value="Item.Description"
+                          Label="Descrição"
+                          Variant="Variant.Outlined"
+                          Required="true"
+                          Class="mb-3" />
+        </MudItem>
+
+        <!-- Linha 2: Quantidade e Preços -->
+        <MudItem xs="12" md="4">
+            <MudTextField @bind-Value="Item.QtyStock"
+                             Label="Stock Disponível"
+                             Variant="Variant.Outlined"
+                             Required="true"
+                             Min="0"
+                             Step="1"
+                             RequiredError="Quantidade é obrigatória"
+                             Class="mb-3" />
+        </MudItem>
+
+        <MudItem xs="12" md="4">
+            <MudTextField T="decimal"
+                             @bind-Value="Item.SellingToConsumerPrice"
+                             Label="Preço de Venda ao Público"
+                             Variant="Variant.Outlined"
+                             Required="true"
+                             RequiredError="Preço de venda é obrigatório"
+                             Adornment="Adornment.Start"
+                             AdornmentText="€"
+                             AdornmentIcon="@Icons.Material.Filled.AttachMoney"
+                             Min="0"
+                             Step="0.01m"
+                             Class="mb-3" />
+        </MudItem>
+
+        <MudItem xs="12" md="4">
+            <MudTextField T="decimal"
+                             @bind-Value="Item.BuyingFromSupplierPrice"
+                             Label="Preço de Compra ao Fornecedor"
+                             Variant="Variant.Outlined"
+                             Required="true"
+                             RequiredError="Preço de compra é obrigatório"
+                             Adornment="Adornment.Start"
+                             AdornmentText="€"
+                             AdornmentIcon="@Icons.Material.Filled.AttachMoney"
+                             Min="0"
+                             Step="0.01m"
+                             Class="mb-3" />
+        </MudItem>
 
 
+        <!-- Linha 3: Categoria, Fornecedor e Marca -->
+        <MudItem xs="12" md="4">
+            <MudSelect T="int?" @bind-Value="Item.CategoryId"
+                       Label="Categoria"
+                       Variant="Variant.Outlined"
+                       Required="true"
+                       RequiredError="Selecione uma categoria"
+                       Clearable="true"
+                       Class="mb-3">
+                @if (categories?.Any() == true)
+                {
+                    @foreach (var category in categories)
+                    {
+                        <MudSelectItem T="int?" Value="@category.Id">@category.CategoryName</MudSelectItem>
+                    }
+                }
+                else
+                {
+                    <MudSelectItem T="int?" Disabled="true">Nenhuma categoria disponível</MudSelectItem>
+                }
+            </MudSelect>
+        </MudItem>
 
-<EditForm FormName="ItemForm" Model="Item" OnValidSubmit="OnAddItem">
-    <DataAnnotationsValidator/>
+        <MudItem xs="12" md="4">
+            <MudSelect T="int?" @bind-Value="Item.SupplierId"
+                       Label="Fornecedor"
+                       Variant="Variant.Outlined"
+                       Required="true"
+                       RequiredError="Selecione um fornecedor"
+                       Clearable="true"
+                       Class="mb-3">
+                @if (suppliers?.Any() == true)
+                {
+                    @foreach (var supplier in suppliers)
+                    {
+                        <MudSelectItem T="int?" Value="@supplier.Id">@supplier.SupplierName</MudSelectItem>
+                    }
+                }
+                else
+                {
+                    <MudSelectItem T="int?" Disabled="true">Nenhum fornecedor disponível</MudSelectItem>
+                }
+            </MudSelect>
+        </MudItem>
 
-    <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label">Name</label>
-        <InputText id="exampleFormControlInput1" class="form-control" placeholder="Name" @bind-Value=Item.Name />
-    </div>
+        <MudItem xs="12" md="4">
+            <MudSelect T="int?" @bind-Value="Item.BrandId"
+                       Label="Marca"
+                       Variant="Variant.Outlined"
+                       Required="true"
+                       RequiredError="Selecione uma marca"
+                       Clearable="true"
+                       Class="mb-3">
+                @if (brands?.Any() == true)
+                {
+                    @foreach (var brand in brands)
+                    {
+                        <MudSelectItem T="int?" Value="@brand.Id">@brand.BrandName</MudSelectItem>
+                    }
+                }
+                else
+                {
+                    <MudSelectItem T="int?" Disabled="true">Nenhuma marca disponível</MudSelectItem>
+                }
+            </MudSelect>
+        </MudItem>
+    </MudGrid> 
 
-    <div class="mb-3">
-        <label for="exampleFormControlInput2" class="form-label">Description</label>
-        <InputText id="exampleFormControlInput2" class="form-control" placeholder="Surname" @bind-Value=Item.Description />
-    </div>
-
-    <div class="mb-3">
-        <label for="exampleFormControlInput3" class="form-label">QtyStock</label>
-        <InputText id="exampleFormControlInput3" class="form-control" placeholder="QtyStock" @bind-Value=Item.QtyStock />
-    </div>
-        <div class="mb-3">
-        <label for="exampleFormControlInput4" class="form-label">SellingToConsumerPrice</label>
-        <InputText id="exampleFormControlInput4" class="form-control" placeholder="SellingToConsumerPrice" @bind-Value=Item.SellingToConsumerPrice />
-    </div>    
-    
-    <div class="mb-3">
-        <label for="exampleFormControlInput5" class="form-label">BuyingFromSupplierPrice</label>
-        <InputText id="exampleFormControlInput5" class="form-control" placeholder="BuyingFromSupplierPrice" @bind-Value=Item.BuyingFromSupplierPrice />
-    </div>
+    <!-- Botão de submit -->
+    <MudButton Variant="Variant.Filled"
+               Color="Color.Primary"
+               ButtonType="ButtonType.Submit"
+               Class="mt-3">
+        Adicionar Item
+    </MudButton>
 
 
+    <MudItem xs="12" Class="text-center mt-2">
+        <MudText Typo="Typo.caption">Campos marcados com asterisco(*) são obrigatórios!</MudText>
+    </MudItem>
 
-    @{
-        var buttonText = Id > 0 ? "Save" : "Add";}
-    <button class="btn btn-primary" type="submit">@buttonText</button>
-
-    <ValidationSummary/>
+    <ValidationSummary />
 </EditForm>
+
+
 
 @Message
 
 
 @code{
 
-        [Parameter]
-        public int Id { get; set; }
+    [Parameter]
+    public int Id { get; set; }
 
     private Item Item { get; set; } = new();
 
     private string Message { get; set; } = string.Empty;
 
-    protected override async   Task OnInitializedAsync()
+    private List<Brand> brands = new();
+
+    private List<Category> categories = new();
+
+    private List<Supplier> suppliers = new();
+
+
+    protected override async Task OnInitializedAsync()
     {
         await base.OnInitializedAsync();
 
+        brands = await ApiService.GetBrandsAsync();
+
+        categories = await ApiService.GetCategoriesAsync();
+
+        suppliers = await ApiService.GetSuppliersAsync();
+
+
         if (Id > 0)
-            Item = await ApiService.GetItemsAsync(Id);
+            Item = await ApiService.GetItemAsync(Id);
     }
+
 
     private async Task OnAddItem()
     {
-
-        if (Id > 0)
-        {
-            var response = await ApiService.UpdateItem(Item);
-            if (response.IsSuccessStatusCode)
-            {
-                Snackbar.Add("Item atualizado com sucesso!",Severity.Success);
-                Item = new();
-            }
-            else
-            {
-                Snackbar.Add("Erro ao atualizar o item!", Severity.Error);
-            }
-        }
-        else
-        {
             var response = await ApiService.AddItemAsync(Item);
                 if (response.IsSuccessStatusCode)
                 {
@@ -104,6 +220,37 @@ else
                 }
         }
 
+
+
+    //     private async Task OnAddItem()
+    // {
+
+    //     if (Id > 0)
+    //     {
+    //         var response = await ApiService.UpdateItem(Item);
+    //         if (response.IsSuccessStatusCode)
+    //         {
+    //             Snackbar.Add("Item atualizado com sucesso!", Severity.Success);
+    //             Item = new();
+    //         }
+    //         else
+    //         {
+    //             Snackbar.Add("Erro ao atualizar o item!", Severity.Error);
+    //         }
+    //     }
+    //     else
+    //     {
+    //         var response = await ApiService.AddItemAsync(Item);
+    //         if (response.IsSuccessStatusCode)
+    //         {
+    //             Snackbar.Add("Item adicionado com sucesso!", Severity.Success);
+    //             Item = new();
+    //         }
+    //         else
+    //         {
+    //             Snackbar.Add("Erro ao adicionar o item!", Severity.Error);
+    //         }
+    //     }
+
        
-    }
-} *@
+}

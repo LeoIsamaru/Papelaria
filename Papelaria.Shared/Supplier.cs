@@ -5,10 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Papelaria.Business.Entities
+namespace Papelaria.Shared
 {
-    public class Supplier : BaseEntity
+    public class Supplier
     {
+        [Required]
+        public int Id { get; set; }
 
         [Required]
         public string? SupplierName { get; set; }
@@ -21,9 +23,5 @@ namespace Papelaria.Business.Entities
 
         [Required]
         public string? SupplierPhone { get; set; }
-
-
-        //Propriedades Navegação
-        public virtual ICollection<Item> Items { get; set; }
     }
 }

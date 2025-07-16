@@ -1,0 +1,48 @@
+﻿@page "/addcategory"
+@inject IApiService ApiService
+@inject ISnackbar Snackbar
+@using Papelaria.Shared
+@using MudBlazor
+@rendermode InteractiveServer
+
+<MudSnackbarProvider />
+
+<h3>Add Category</h3>
+
+<EditForm Model="category" OnValidSubmit="OnAddCategory">
+    <DataAnnotationsValidator />
+
+    <div class="mb-3">
+        <label class="form-label">Category Name</label>
+        <InputText class="form-control" placeholder="Category Name" @bind-Value="category.CategoryName" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Category Description</label>
+        <InputText class="form-control" placeholder="Category Description" @bind-Value="category.CategoryDescription" />
+    </div>
+
+    <button class="btn btn-primary" type="submit">Add</button>
+
+    <ValidationSummary />
+</EditForm>
+
+@Message
+
+@code {
+    private Category category = new();
+    private string Message = string.Empty;
+
+    private async Task OnAddCategory()
+    {
+        var response = await ApiService.AddCategoryAsync(category);
+        if (response.IsSuccessStatusCode)
+        {
+            Snackbar.Add("Category added successfully!", Severity.Success);
+            category = new();
+        }
+        else
+        {
+            Snackbar.Add("Error adding category!", Severity.Error);
+        }
+    }
+}

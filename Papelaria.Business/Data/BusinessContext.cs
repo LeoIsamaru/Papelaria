@@ -11,7 +11,9 @@ namespace Papelaria.Business.Data
 {
     public class BusinessContext : DbContext, IBusinessContext
     {
-        public BusinessContext(DbContextOptions<BusinessContext> options) : base(options) { }
+        public BusinessContext(DbContextOptions<BusinessContext> options) : base(options)
+        {
+        }
 
 
         public DbSet<Item> Items { get; set; }
@@ -26,9 +28,9 @@ namespace Papelaria.Business.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            base.OnConfiguring(optionsBuilder);
+            //base.OnConfiguring(optionsBuilder);
 
-            optionsBuilder.UseSqlServer("Data Source=SQL6033.site4now.net;Initial Catalog=db_abaef1_papelaria;User Id=db_abaef1_papelaria_admin;Password=)23ix%5]a~[0}0*#f@OU");
+            //optionsBuilder.UseSqlServer("Data Source=SQL6033.site4now.net;Initial Catalog=db_abaef1_papelaria;User Id=db_abaef1_papelaria_admin;Password=)23ix%5]a~[0}0*#f@OU");
         }
 
 
@@ -43,14 +45,27 @@ namespace Papelaria.Business.Data
 
 
 
-        public async Task<int> SaveChangesAsync(bool acceptAllChangesOnSuccess)
-        {
-            return await base.SaveChangesAsync(acceptAllChangesOnSuccess);
-        }
+        //public async Task<int> SaveChangesAsync(bool acceptAllChangesOnSuccess)
+        //{
+        //    return await base.SaveChangesAsync(acceptAllChangesOnSuccess);
+        //}
 
+        //public async Task<int> SaveChangesAsync()
+        //{
+        //    return await base.SaveChangesAsync();
+        //}
+
+
+
+        // Métodos para salvar alterações de forma assíncrona
         public async Task<int> SaveChangesAsync()
         {
             return await base.SaveChangesAsync();
+        }
+
+        public async Task<int> SaveChangesAsync(bool acceptAllChangesOnSuccess)
+        {
+            return await base.SaveChangesAsync(acceptAllChangesOnSuccess);
         }
 
     }
