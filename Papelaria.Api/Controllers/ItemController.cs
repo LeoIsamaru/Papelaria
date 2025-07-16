@@ -247,7 +247,7 @@ namespace Papelaria.Api.Controllers
         {
             try
             {
-                var items = await _businessContext.Items.ToListAsync();
+                var items = await _businessContext.Items.Where(x => x.IsDeleted.Equals(false)).ToListAsync();
 
                 var dtos = items.Select(item => new Papelaria.Shared.Item
                 {
@@ -256,7 +256,7 @@ namespace Papelaria.Api.Controllers
                     Description = item.Description,
                     QtyStock = item.QtyStock,
                     SellingToConsumerPrice = item.SellingToConsumerPrice,
-                    BuyingFromSupplierPrice = item.BuyingFromSupplierPrice
+                    BuyingFromSupplierPrice = item.BuyingFromSupplierPrice,
                 }).ToList();
 
                 return Ok(dtos);
@@ -346,7 +346,7 @@ namespace Papelaria.Api.Controllers
         }
 
         // PUT /items/{id}/delete (soft delete)
-        [HttpPut("/items/{id}/delete")]
+        [HttpPut("/items/{id}")]
         public async Task<IActionResult> DeleteItem(int id)
         {
             var existingItem = await _businessContext.Items.FindAsync(id);
