@@ -1,0 +1,74 @@
+﻿@page "/edititem/{Id:int}"
+@inject IApiService ApiService
+@inject ISnackbar Snackbar
+@inject NavigationManager NavigationManager
+@using Papelaria.Shared
+@using MudBlazor
+
+<h3>Editar Item</h3>
+
+@if (Item == null)
+{
+    <MudProgressCircular Indeterminate="true" Color="Color.Primary" />
+}
+else
+{
+    <EditForm Model="Item" OnValidSubmit="OnUpdateItem">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Name</label>
+            <InputText id="exampleFormControlInput1" class="form-control" placeholder="Name" @bind-Value=Item.Name />
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput2" class="form-label">Description</label>
+            <InputText id="exampleFormControlInput2" class="form-control" placeholder="Surname" @bind-Value=Item.Description />
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput3" class="form-label">QtyStock</label>
+            <InputNumber id="exampleFormControlInput3" class="form-control" placeholder="QtyStock" @bind-Value=Item.QtyStock />
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput4" class="form-label">SellingToConsumerPrice</label>
+            <InputNumber id="exampleFormControlInput4" class="form-control" placeholder="SellingToConsumerPrice" @bind-Value=Item.SellingToConsumerPrice />
+        </div>    
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput5" class="form-label">BuyingFromSupplierPrice</label>
+            <InputNumber id="exampleFormControlInput5" class="form-control" placeholder="BuyingFromSupplierPrice" @bind-Value=Item.BuyingFromSupplierPrice />
+        </div>
+
+        <MudButton Color="Color.Primary" Variant="Variant.Filled" Type="Submit">Salvar</MudButton>
+    </EditForm>
+}
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+
+    private Papelaria.Shared.Item Item { get; set; } = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        Item = await ApiService.GetItemsAsync(Id);
+    }
+
+    private async Task OnUpdateItem()
+    {
+        var response = await ApiService.UpdateItemAsync(Item);
+        if (response.IsSuccessStatusCode)
+        {
+            Snackbar.Add("Item atualizado com sucesso!", Severity.Success);
+            NavigationManager.NavigateTo("/items");
+        }
+        else
+        {
+            Snackbar.Add("Erro ao atualizar o item!", Severity.Error);
+        }
+    }
+}
+
